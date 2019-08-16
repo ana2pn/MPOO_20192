@@ -3,13 +3,19 @@ package pacoteprincipal;
 public class Application {
 
     public static void main(String[] args) {
-        HelloWorld objeto1 = new HelloWorld();
-        HelloWorld objeto2 = new HelloWorld();
+        HelloWorld usuario1 = new HelloWorld();
+        HelloWorld usuario2 = new HelloWorld();
+        HelloWorld usuario3 = new HelloWorld();
+        HelloWorld usuario4 = new HelloWorld();
 
-        objeto1.setNome("Ana Paula");
-        objeto2.setNome("Carolina");
 
-        System.out.println(objeto1.getNome());
-        System.out.println(objeto2.getNome());
+        usuario1.setNome("Ana Paula");
+        usuario2.setNome("Carolina");
+        usuario3.setNome("Carlos");
+
+        usuario1.imprime();
+        usuario2.imprime();
+        usuario3.imprime();
+        usuario4.imprime();
     }
 }
