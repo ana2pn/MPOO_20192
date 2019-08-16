@@ -1,7 +1,5 @@
 package pacoteprincipal;
 
-import java.sql.SQLOutput;
-
 public class Application {
 
     public static void main(String[] args) {
@@ -10,13 +8,14 @@ public class Application {
         HelloWorld usuario3 = new HelloWorld();
         HelloWorld usuario4 = new HelloWorld();
 
+
         usuario1.setNome("Ana Paula");
         usuario2.setNome("Carolina");
         usuario3.setNome("Carlos");
 
-        System.out.println(usuario1.getNome());
-        System.out.println(usuario2.getNome());
-        System.out.println(usuario3.getNome());
-        System.out.println(usuario4.getNome());
+        usuario1.imprime();
+        usuario2.imprime();
+        usuario3.imprime();
+        usuario4.imprime();
     }
 }
