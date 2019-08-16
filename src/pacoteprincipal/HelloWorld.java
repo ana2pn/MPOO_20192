@@ -3,11 +3,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class HelloWorld {
-
-
-
-
-
+    
     private String nome;
     Date hora_atual = new Date();
     String hora = new SimpleDateFormat("HH:mm:ss").format(hora_atual);
