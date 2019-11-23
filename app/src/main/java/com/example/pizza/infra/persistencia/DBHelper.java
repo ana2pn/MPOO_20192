@@ -8,7 +8,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class DBHelper extends SQLiteOpenHelper {
 
     private static final String DB_NAME = "AppPizza.bd";
-    private static final int DB_VERSION = 0;
+    private static final int DB_VERSION = 1;
 
     public static final String TABELA_PIZZA = "Tabela_Pizza";
     public static final String COL_ID_PIZZA = "id";

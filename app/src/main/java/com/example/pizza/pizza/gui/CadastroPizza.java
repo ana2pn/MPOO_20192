@@ -13,6 +13,8 @@ import com.example.pizza.R;
 import com.example.pizza.infra.gui.MainActivity;
 import com.example.pizza.infra.gui.Validacao;
 import com.example.pizza.pizza.dominio.Pizza;
+import com.example.pizza.pizza.negocio.PizzaServices;
+
 
 public class CadastroPizza extends AppCompatActivity {
 
@@ -23,24 +25,25 @@ public class CadastroPizza extends AppCompatActivity {
         getSupportActionBar().hide();
 
         Button btncadastrar = findViewById(R.id.btnCadastrar);
-
-
-
         btncadastrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                cadastrar();
+                try {
+                    cadastrar();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    Toast.makeText(getApplicationContext(), "Não foi possível cadastrar a pizza.", Toast.LENGTH_LONG).show();
+
+                }
             }
         });
-
     }
 
-    private void cadastrar() {
+    private void cadastrar() throws Exception {
         if (validarCampos()) {
             Pizza pizza = criarPizza();
-
-            //PizzaServices services = new PizzaServices(getBaseContext());
-            //services.cadastrar(pizza);
+            PizzaServices services = new  PizzaServices(getBaseContext());
+            services.cadastrar(pizza);
             Toast.makeText(getApplicationContext(), "Pizza cadastrada com sucesso.", Toast.LENGTH_LONG).show();
             startActivity(new Intent(CadastroPizza.this, MainActivity.class));
         }
