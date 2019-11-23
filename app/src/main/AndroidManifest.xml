@@ -11,6 +11,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".pizza.gui.HomePizza"></activity>
         <activity android:name=".pizza.gui.CadastroPizza" />
+        <activity android:name=".pizza.negocio.PizzaServices"/>
         <activity android:name=".infra.gui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
