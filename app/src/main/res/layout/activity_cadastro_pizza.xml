@@ -7,7 +7,7 @@
     tools:context=".pizza.gui.CadastroPizza">
 
     <EditText
-        android:id="@+id/nomeCadastroEditText"
+        android:id="@+id/nomeCadastroTextField"
         android:layout_width="294dp"
         android:layout_height="52dp"
         android:layout_marginTop="96dp"
@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/codigoCadastroEditText"
+        android:id="@+id/codigoCadastroTextField"
         android:layout_width="298dp"
         android:layout_height="51dp"
         android:layout_marginTop="168dp"
@@ -33,7 +33,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/descricaoEditText"
+        android:id="@+id/descricaoCadastroTextField"
         android:layout_width="302dp"
         android:layout_height="117dp"
         android:layout_marginTop="248dp"
@@ -49,7 +49,7 @@
         android:id="@+id/btnCadastrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="428dp"
+        android:layout_marginTop="472dp"
         android:text="Cadastrar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

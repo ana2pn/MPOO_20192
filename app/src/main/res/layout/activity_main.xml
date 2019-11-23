@@ -7,7 +7,7 @@
     tools:context=".infra.gui.MainActivity">
 
     <EditText
-        android:id="@+id/nomeEditText"
+        android:id="@+id/nomeCadastroTextField"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="140dp"
@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/codigoEditText"
+        android:id="@+id/codigoTextField"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="200dp"
