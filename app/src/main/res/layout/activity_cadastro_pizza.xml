@@ -7,15 +7,28 @@
     tools:context=".pizza.gui.CadastroPizza">
 
     <EditText
+        android:id="@+id/descricaoCadastroTextField"
+        android:layout_width="302dp"
+        android:layout_height="117dp"
+        android:layout_marginTop="292dp"
+        android:ems="10"
+        android:hint="Digite uma descrição para a pizza"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
         android:id="@+id/nomeCadastroTextField"
         android:layout_width="294dp"
         android:layout_height="52dp"
-        android:layout_marginTop="96dp"
+        android:layout_marginTop="140dp"
         android:ems="10"
         android:hint="Digite o nome da pizza"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -23,33 +36,21 @@
         android:id="@+id/codigoCadastroTextField"
         android:layout_width="298dp"
         android:layout_height="51dp"
-        android:layout_marginTop="168dp"
+        android:layout_marginTop="212dp"
         android:ems="10"
         android:hint="Digite o codigo da pizza"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.442"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/descricaoCadastroTextField"
-        android:layout_width="302dp"
-        android:layout_height="117dp"
-        android:layout_marginTop="248dp"
-        android:ems="10"
-        android:hint="Digite uma descrição para a pizza"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.458"
+        app:layout_constraintHorizontal_bias="0.477"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnCadastrar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="137dp"
+        android:layout_height="46dp"
         android:layout_marginTop="472dp"
+        android:background="#EB7B7B"
         android:text="Cadastrar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
