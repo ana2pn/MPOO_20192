@@ -52,6 +52,7 @@
         android:layout_marginTop="472dp"
         android:background="#EB7B7B"
         android:text="Cadastrar"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
