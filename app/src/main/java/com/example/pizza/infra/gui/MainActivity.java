@@ -12,6 +12,7 @@ import android.widget.Toast;
 import com.example.pizza.R;
 import com.example.pizza.pizza.gui.CadastroPizza;
 import com.example.pizza.pizza.gui.HomePizza;
+import com.example.pizza.pizza.gui.RecyclerViewPizza;
 import com.example.pizza.pizza.negocio.PizzaServices;
 
 public class MainActivity extends AppCompatActivity {
@@ -27,7 +28,9 @@ public class MainActivity extends AppCompatActivity {
         final EditText codigo = findViewById(R.id.codigoTextField);
 
         Button btnCadastrar = findViewById(R.id.btnCadastrar);
+        Button btnListar = findViewById(R.id.btnListar);
         Button btnLogin = findViewById(R.id.btnLogin);
+
         btnCadastrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -39,6 +42,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 entrarPizza(nome, codigo);
+            }
+        });
+        btnListar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, RecyclerViewPizza.class));
+
             }
         });
     }

@@ -8,6 +8,9 @@ import android.database.sqlite.SQLiteDatabase;
 import com.example.pizza.infra.persistencia.DBHelper;
 import com.example.pizza.pizza.dominio.Pizza;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static com.example.pizza.infra.persistencia.DBHelper.COL_CODIGO_PIZZA;
 import static com.example.pizza.infra.persistencia.DBHelper.COL_NOME_PIZZA;
 import static com.example.pizza.infra.persistencia.DBHelper.TABELA_PIZZA;
@@ -69,5 +72,27 @@ public class PizzaDAO {
         return result;
     }
 
+    public List<Pizza> getAllPizzas() {
+        List<Pizza> pizzasArrayList = new ArrayList<>();
+        SQLiteDatabase db = dbHelper.getReadableDatabase();
+        String query = " SELECT * " +
+                " FROM " + TABELA_PIZZA;
+        String[] args = {};
+        Cursor cursor = db.rawQuery(query, args);
+        Pizza pizza = null;
+        if (cursor.moveToFirst()) {
+            do {
+                pizza = criarPizza(cursor);
+                pizzasArrayList.add(pizza);
+            } while (cursor.moveToNext());
+
+            cursor.close();
+            db.close();
+            return pizzasArrayList;
+        }
+        cursor.close();
+        db.close();
+        return pizzasArrayList;
+    }
 }
 

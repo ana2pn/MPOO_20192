@@ -9,44 +9,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/nome"
-        android:text="Nome"
-        android:layout_marginLeft="30dp"
+        android:text="nnnnnn"
+        android:layout_marginLeft="80dp"
         android:textSize="18sp"
         android:textColor="#000"
         />
 
+
     <TextView
-        android:id="@+id/localizacao"
+        android:id="@+id/codigo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerVertical="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="30dp"
-        android:text="Localização"
-        android:textColor="#000"
-        android:textSize="18sp" />
-    <TextView
-        android:id="@+id/Likes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerVertical="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="60dp"
-        android:text="Avaliações:"
-        android:textColor="#000"
-        android:textSize="18sp" />
-    <TextView
-        android:id="@+id/qtdLikes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerVertical="true"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="60dp"
-        android:layout_toRightOf="@id/Likes"
-        android:text="0"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="36dp"
+        android:text="ccccccc"
         android:textColor="#000"
         android:textSize="18sp" />
 
@@ -63,5 +39,6 @@
         android:layout_height="95dp"
         android:background="#00AF0D25"
         android:textColor="#ffffff" />
+
 
 </RelativeLayout>

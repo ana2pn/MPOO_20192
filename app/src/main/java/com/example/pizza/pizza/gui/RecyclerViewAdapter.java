@@ -1,23 +1,27 @@
 package com.example.pizza.pizza.gui;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.pizza.InformacoesPizza;
 import com.example.pizza.R;
 
 import java.util.ArrayList;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
-    private ArrayList<String> nome;
-    private ArrayList<String> codigo;
-    private ArrayList<String> descricao;
+    private ArrayList<String> nome = new ArrayList<>();
+    private ArrayList<String> codigo = new ArrayList<>();
+    private ArrayList<String> descricao = new ArrayList<>();
+    private Context mContext;
 
     public RecyclerViewAdapter(Context context, ArrayList<String> nome, ArrayList<String> codigo, ArrayList<String> descricao) {
         this.nome = nome;
@@ -34,7 +38,20 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
+        holder.nome.setText(nome.get(position));
+        holder.codigo.setText(codigo.get(position));
+
+//        holder.btnVerMais.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(mContext, InformacoesPizza.class);
+//                intent.putExtra("nome", nome.get(position));
+//                intent.putExtra("codigo", codigo.get(position));
+//                intent.putExtra("descricao", descricao.get(position));
+//                mContext.startActivity(intent);
+//            }
+//        });
 
     }
 
@@ -48,9 +65,16 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         TextView nome;
         TextView codigo;
         TextView descricao;
+        RelativeLayout parentLayout;
         Button btnVerMais;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
+            nome = itemView.findViewById(R.id.nome);
+            codigo = itemView.findViewById(R.id.codigo);
+            btnVerMais = itemView.findViewById(R.id.btnVerMais);
+            descricao = itemView.findViewById(R.id.descricaoCadastroTextField);
+            parentLayout = itemView.findViewById(R.id.parent_layout);
+
         }
     }
 }
