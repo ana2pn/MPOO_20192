@@ -10,7 +10,27 @@
         android:layout_height="wrap_content"
         android:id="@+id/nome"
         android:text="nnnnnn"
-        android:layout_marginLeft="80dp"
+        android:layout_marginLeft="90dp"
+        android:textSize="18sp"
+        android:textColor="#000"
+        />
+
+
+    <TextView
+        android:id="@+id/editCodigo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="36dp"
+        android:text="Código:"
+        android:textColor="#000"
+        android:textSize="18sp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editNome"
+        android:text="Nome:"
+        android:layout_marginLeft="30dp"
         android:textSize="18sp"
         android:textColor="#000"
         />
@@ -20,11 +40,12 @@
         android:id="@+id/codigo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="80dp"
+        android:layout_marginLeft="96dp"
         android:layout_marginTop="36dp"
-        android:text="ccccccc"
+        android:text="ccccc"
         android:textColor="#000"
         android:textSize="18sp" />
+
 
     <View
         android:layout_width="fill_parent"

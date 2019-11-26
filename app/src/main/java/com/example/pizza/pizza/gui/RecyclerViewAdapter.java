@@ -18,15 +18,16 @@ import com.example.pizza.R;
 import java.util.ArrayList;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
-    private ArrayList<String> nome = new ArrayList<>();
-    private ArrayList<String> codigo = new ArrayList<>();
-    private ArrayList<String> descricao = new ArrayList<>();
+    private ArrayList<String> mNome = new ArrayList<>();
+    private ArrayList<String> mCodigo = new ArrayList<>();
+    private ArrayList<String> mDescricao = new ArrayList<>();
     private Context mContext;
 
     public RecyclerViewAdapter(Context context, ArrayList<String> nome, ArrayList<String> codigo, ArrayList<String> descricao) {
-        this.nome = nome;
-        this.codigo = codigo;
-        this.descricao = descricao;
+        this.mNome = nome;
+        this.mCodigo = codigo;
+        this.mDescricao = descricao;
+        this.mContext = context;
     }
 
     @NonNull
@@ -39,32 +40,31 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
-        holder.nome.setText(nome.get(position));
-        holder.codigo.setText(codigo.get(position));
+        holder.nome.setText(mNome.get(position));
+        holder.codigo.setText(mCodigo.get(position));
 
-//        holder.btnVerMais.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(mContext, InformacoesPizza.class);
-//                intent.putExtra("nome", nome.get(position));
-//                intent.putExtra("codigo", codigo.get(position));
-//                intent.putExtra("descricao", descricao.get(position));
-//                mContext.startActivity(intent);
-//            }
-//        });
+        holder.btnVerMais.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mContext, InformacoesPizza.class);
+                intent.putExtra("nome", mNome.get(position));
+                intent.putExtra("codigo", mCodigo.get(position));
+                intent.putExtra("descricao", mDescricao.get(position));
+                mContext.startActivity(intent);
+            }
+        });
 
     }
 
 
     @Override
     public int getItemCount() {
-        return nome.size();
+        return mNome.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
         TextView nome;
         TextView codigo;
-        TextView descricao;
         RelativeLayout parentLayout;
         Button btnVerMais;
         public ViewHolder(@NonNull View itemView) {
@@ -72,7 +72,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             nome = itemView.findViewById(R.id.nome);
             codigo = itemView.findViewById(R.id.codigo);
             btnVerMais = itemView.findViewById(R.id.btnVerMais);
-            descricao = itemView.findViewById(R.id.descricaoCadastroTextField);
             parentLayout = itemView.findViewById(R.id.parent_layout);
 
         }
