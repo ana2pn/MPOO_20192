@@ -1,4 +1,6 @@
 # MPOO_20192
 
-Na branch entrega-2 possui um mini aplicativo, cuja principal função é cadastar uma pizza no sitema, fazer o login com a pizza que 
-foi cadastrada e ver a lista de todas as pizzas cadastradas no sistema.
+Na branch entrega-2 possui um aplicativo, cuja principal função é cadastar uma pizza no sistema, fazer o login e ver a lista de todas as pizzas cadastradas no sistema.
+
+O código deste aplicativo foi feito baseado no código do aplicativo RevCare
+https://github.com/RevCare/AplicativoRevCare2
